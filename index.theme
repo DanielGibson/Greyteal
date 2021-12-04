@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Greybird
-Comment=Greybird theme
+Name=Greyteal
+Comment=Greyteal theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Greybird
-MetacityTheme=Greybird
+GtkTheme=Greyteal
+MetacityTheme=Greyteal
 IconTheme=Adwaita
 CursorTheme=Adwaita
 ButtonLayout=:minimize,maximize,close
