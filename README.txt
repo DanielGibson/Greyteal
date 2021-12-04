@@ -17,6 +17,10 @@ I only tested this on XFCE and didn't change anything in the folders
 not relevant for that like gnome-shell/ or unity/
 I don't even know what "Greybird.emerald" is so I just left it as it was
 
+Usage/Installation: Copy the Greyteal/ folder (that contains gtk-2.0/ etc) to
+/usr/share/themes/ or $HOME/.themes/ and tell your Desktop Environment to use it.
+In XFCE Settings you can set in in "Appereance" for the Gtk theme and
+in "Window Manager" to enable the XFWM theme.
 
 (C) 2021, Daniel Gibson
 
@@ -68,7 +72,7 @@ Theme released under GNU GPL license.
 
 ################################################################################
 
-# License of Greybird (from Ubuntu's greybird-gtk-theme 3.22.12-0ubuntu1 package):
+# License of Greybird (from debian's greybird-gtk-theme 3.22.15-1 package):
 
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Greybird
