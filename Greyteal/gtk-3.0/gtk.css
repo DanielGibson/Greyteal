@@ -1,5 +1,6 @@
 @define-color greyteal-base-color #008080; /* teal; formerly I used #4E787A */
 @define-color greyteal-slider-base-color shade(@greyteal-base-color, 1.4); /* formerly #dbdbdb-ish*/
+@define-color greyteal-base-unfocused-color #51a0a0;
 /* did search and replace: #398ee7 => @greyteal-base-color */
 
 *, .selection-mode.titlebar:not(headerbar) .subtitle:link, headerbar.selection-mode .subtitle:link { padding: 0; -GtkToolButton-icon-spacing: 4; -GtkTextView-error-underline-color: #cc0000; -GtkScrolledWindow-scrollbar-spacing: 0; -GtkToolItemGroup-expander-size: 11; -GtkWidget-text-handle-width: 20; -GtkWidget-text-handle-height: 24; -GtkDialog-button-spacing: 4; -GtkDialog-action-area-border: 0; outline-color: alpha(currentColor,0.3); outline-style: dashed; outline-offset: -3px; outline-width: 1px; -gtk-outline-radius: 2px; -gtk-secondary-caret-color: @greyteal-base-color; }
@@ -1884,7 +1885,15 @@ selection:backdrop, .view:backdrop:selected, .view text:backdrop:selected, textv
 
 row:selected label, label:selected, headerbar.selection-mode row.subtitle:link label, headerbar.selection-mode label.subtitle:link, .selection-mode button.titlebutton, selection, .view:selected, .view text:selected, textview text:selected, iconview:selected, flowbox flowboxchild:selected, label:disabled selection, modelbutton.flat:selected, .menuitem.button.flat:selected, headerbar.selection-mode .view.subtitle:link, flowbox headerbar.selection-mode flowboxchild.subtitle:link, headerbar.selection-mode flowbox flowboxchild.subtitle:link, headerbar.selection-mode .flat.subtitle:link, popover.background checkbutton.flat:selected, popover.background radiobutton.flat:selected, popover.background checkbutton.button:selected, popover.background radiobutton.button:selected, notebook > header > tabs > arrow.button:selected, row:selected, headerbar.selection-mode row.subtitle:link, .selection-mode.titlebar:not(headerbar) row.subtitle:link, calendar:selected, headerbar.selection-mode calendar.subtitle:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:link, button.button.sidebar-button:selected, button.button.titlebutton:selected { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); }
 
-row:selected label:backdrop, label:backdrop:selected, headerbar.selection-mode row.subtitle:link label:backdrop, headerbar.selection-mode label.subtitle:backdrop:link, .selection-mode button.titlebutton:backdrop, selection:backdrop, .view:backdrop:selected, .view text:backdrop:selected, textview text:backdrop:selected, iconview:backdrop:selected, flowbox flowboxchild:backdrop:selected, label:disabled selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, headerbar.selection-mode .view.subtitle:backdrop:link, flowbox headerbar.selection-mode flowboxchild.subtitle:backdrop:link, headerbar.selection-mode flowbox flowboxchild.subtitle:backdrop:link, headerbar.selection-mode .flat.subtitle:backdrop:link, popover.background checkbutton.flat:backdrop:selected, popover.background radiobutton.flat:backdrop:selected, popover.background checkbutton.button:backdrop:selected, popover.background radiobutton.button:backdrop:selected, notebook > header > tabs > arrow.button:backdrop:selected, row:backdrop:selected, headerbar.selection-mode row.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) row.subtitle:backdrop:link, calendar:backdrop:selected, headerbar.selection-mode calendar.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:backdrop:link, button.button.sidebar-button:backdrop:selected, button.button.titlebutton:backdrop:selected { color: #7d7d7d; background-color: #d1d1d1; }
+row:selected label:backdrop, label:backdrop:selected, headerbar.selection-mode row.subtitle:link label:backdrop, headerbar.selection-mode label.subtitle:backdrop:link,
+ .selection-mode button.titlebutton:backdrop, selection:backdrop, .view:backdrop:selected, .view text:backdrop:selected, textview text:backdrop:selected, iconview:backdrop:selected,
+ flowbox flowboxchild:backdrop:selected, label:disabled selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, headerbar.selection-mode .view.subtitle:backdrop:link,
+ flowbox headerbar.selection-mode flowboxchild.subtitle:backdrop:link, headerbar.selection-mode flowbox flowboxchild.subtitle:backdrop:link, headerbar.selection-mode .flat.subtitle:backdrop:link,
+ popover.background checkbutton.flat:backdrop:selected, popover.background radiobutton.flat:backdrop:selected, popover.background checkbutton.button:backdrop:selected,
+ popover.background radiobutton.button:backdrop:selected, notebook > header > tabs > arrow.button:backdrop:selected, row:backdrop:selected, headerbar.selection-mode row.subtitle:backdrop:link,
+ .selection-mode.titlebar:not(headerbar) row.subtitle:backdrop:link, calendar:backdrop:selected, headerbar.selection-mode calendar.subtitle:backdrop:link,
+ .selection-mode.titlebar:not(headerbar) calendar.subtitle:backdrop:link, button.button.sidebar-button:backdrop:selected,
+  button.button.titlebutton:backdrop:selected { color: #eaeaea; background-color: @greyteal-base-unfocused-color; } /* selected but not focused */
 
 .monospace { font-family: monospace; }
 
@@ -2008,6 +2017,9 @@ text widgets and the like base background color on backdrop windows */
 /*
 base background color of selections on backdrop windows */
 @define-color theme_unfocused_selected_bg_color @greyteal-base-color;
+
+@define-color unfocused_insensitive_color #eaeaea;
+
 /*
 text/foreground color of selections on backdrop windows */
 @define-color theme_unfocused_selected_fg_color #ffffff;
